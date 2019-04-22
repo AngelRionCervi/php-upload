@@ -1,4 +1,7 @@
 <?php
+if (!file_exists('uploads/')) {
+    mkdir('uploads/', 0777, true);
+}
 $target_dir = "uploads/";
 
 for ($i = 0; $i<count($_FILES["fileToUpload"]["name"]); $i++){
